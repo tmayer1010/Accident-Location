@@ -1,11 +1,12 @@
+################################################################
+# Shiny app by Tyson Mayer
+# Oct 30, 2023
 #
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
+# Shows the location of fatal accidents in 2021 in the US
 #
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+# Deployed at https://tysonmayer.shinyapps.io/Shiny_1/
+# Source code at GitHub: https://github.com/tmayer1010/Accident-Location.git
+################################################################
 
 library(shiny)
 library(leaflet)
