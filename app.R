@@ -16,13 +16,13 @@ library(dplyr)
 accident <- read.csv("accident.csv")
 accident$COUNTYNAME <- gsub("\\s*\\(\\d+\\)", "", accident$COUNTYNAME)
 
-# Define UI for application that draws a histogram
+# Define UI for application 
 ui <- fluidPage(
 
     # Application title
     titlePanel("Car Accident Location"),
 
-    # Sidebar with a slider input for number of bins 
+    # selecting state and county 
     sidebarLayout(
         sidebarPanel(
             selectInput("State", "Select State", unique(accident$STATENAME)),
@@ -31,14 +31,14 @@ ui <- fluidPage(
             tableOutput("accidentCountTable"),
         ),
 
-        # Show a plot of the generated distribution
+        # Show map
         mainPanel(
            leafletOutput("map",width = "100%", height = "600px")
         )
     )
 )
 
-# Define server logic required to draw a histogram
+# Define server 
 server <- function(input, output, session) {
 
   observe({
